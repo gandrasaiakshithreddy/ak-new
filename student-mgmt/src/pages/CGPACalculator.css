@@ -1,0 +1,48 @@
+.course-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 0 8px;
+  font-size: 11px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+
+.course-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.result-card { background: linear-gradient(135deg, var(--bg2), var(--bg3)); }
+
+.cgpa-bar-bg {
+  background: var(--bg3);
+  border-radius: 99px;
+  height: 8px;
+  margin: 20px 0 24px;
+  overflow: hidden;
+}
+.cgpa-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width .8s cubic-bezier(.4,0,.2,1);
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.result-stat {
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  border: 1px solid var(--border);
+}

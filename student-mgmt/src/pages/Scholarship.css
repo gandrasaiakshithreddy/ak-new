@@ -1,0 +1,28 @@
+.schol-card { transition: transform .2s, box-shadow .2s; }
+.schol-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: #00000080;
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn .2s ease;
+}
+
+@keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
+
+.modal-box {
+  background: var(--bg2);
+  border: 1.5px solid var(--border2);
+  border-radius: 20px;
+  padding: 36px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: var(--shadow);
+  animation: slideUp .25s ease;
+}

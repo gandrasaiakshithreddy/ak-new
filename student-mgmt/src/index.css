@@ -1,0 +1,85 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0c10;
+  --bg2: #111318;
+  --bg3: #181c24;
+  --border: #ffffff12;
+  --border2: #ffffff22;
+  --accent: #6ee7b7;
+  --accent2: #34d399;
+  --gold: #fbbf24;
+  --red: #f87171;
+  --blue: #60a5fa;
+  --purple: #a78bfa;
+  --text: #f0f4f8;
+  --text2: #9aabb8;
+  --text3: #5a6a78;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 8px 32px #00000060;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --nav-w: 240px;
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4 { font-family: var(--font-head); line-height: 1.15; }
+
+a { color: inherit; text-decoration: none; }
+
+input, select, textarea {
+  background: var(--bg3);
+  border: 1.5px solid var(--border2);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  width: 100%;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px #6ee7b720;
+}
+
+input::placeholder, textarea::placeholder { color: var(--text3); }
+
+button {
+  cursor: pointer;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  transition: all .2s;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+
+/* Utility */
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 10px; border-radius: 99px; font-size: 12px; font-weight: 600;
+}
+.badge-green { background: #6ee7b722; color: var(--accent); }
+.badge-gold  { background: #fbbf2422; color: var(--gold); }
+.badge-blue  { background: #60a5fa22; color: var(--blue); }
+.badge-red   { background: #f8717122; color: var(--red); }
+.badge-purple{ background: #a78bfa22; color: var(--purple); }
